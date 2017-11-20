@@ -1,0 +1,177 @@
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\robustify\cftdotfill
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+	\parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+		\begin{shaded}
+			
+			\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+		\end{shaded}
+	}\vspace{-5pt}
+}
+
+\newcommand{\ressubheading}[4]{
+	\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+	\end{tabular*}\vspace{-6pt}}
+
+\begin{document}
+	\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+		
+		\textbf{{\Large  Maxime St-Pierre}} & \textbf{\today} \\
+		\texttt{me@maximest-pierre.me} \\
+		\texttt{github: maximest-pierre} \\
+	\end{tabular*}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\resheading{Education}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{itemize}
+		
+		\item
+			\ressubheading{Concordia University}{Montréal, QC}{Independent Student}{Starting in January 2018}
+		
+		\item 
+			\ressubheading{École de technologie Supérieure}{Montréal, QC}{Bachelor degrees in IT enginerring}{2015-2017}
+			\begin{itemize}
+				\item Completed 45 credits
+			\end{itemize}
+			
+		\item
+			\ressubheading{École de Technologie Supérieure}{Montréal, QC}{Bachelor degrees in Automated Production}{2013-2015}
+			\begin{itemize}
+				\item Completed 32 credits
+			\end{itemize}
+			
+		\item
+			\ressubheading{CCNB - Bathurst}{Bathurst, NB}{Technologie du génie électronique}{2011- 2013}
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\resheading{Work Experience}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{itemize}
+		\item 
+			\ressubheading{Lockbird inc.}{Montréal, QC}{RnD Intership}{August 2017 to November 2017}
+			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			
+		\item
+			\ressubheading{Lockbird inc.}{Montréal, QC}{Software and Hardware consultant}{Mars 2017 to August 2017}
+			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			
+		\item
+			\ressubheading{Savoir-Faire Linux}{Montréal, QC}{Django developper}{April 2017 to August 2017}
+			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			
+		\item
+			\ressubheading{Pratt \& Whitney Canada}{Longueil, QC}{Quality Assurance Intern}{January 2014 to April 2014]}
+			
+			\begin{itemize}
+				\item 
+			\end{itemize}
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%%
+	
+	\resheading{Student Clubs}
+	
+	%%%%%%%%%%%%%%%%%
+	
+	\begin{itemize}
+		\item 
+			\ressubheading{Walking Machine}{Montréal, QC}{Lead software developper}{September 2016 to present}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+			
+		\item
+			\ressubheading{Club Conjure}{Montréal, QC}{Game Programmer}{April 2016 to December 2016}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+		\item
+			\ressubheading{Club Capra}{Montréal, QC}{Electrical team member}{November 2015 to September 2016}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+
+		\item
+			\ressubheading{BajaETS}{Montréal, QC}{Electrical team member}{September 2013 to November 2015}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%
+	
+	\resheading{Volunteer Work}
+	
+	%%%%%%%%%%%%%%%%
+	
+	\begin{itemize}
+		\item 
+			\ressubheading{Robocup Montréal 2018}{Montréal, QC}{co-chair @HOME}{September 2017 to present}
+			\begin{itemize}
+				\item 
+			\end{itemize}
+	\end{itemize}
+	
+	%%%%%%%%%%%%%%%%
+	
+	\resheading{Skills}
+	
+	%%%%%%%%%%%%%%%%
+	
+	\begin{itemize}
+		\item {\bf Programming Language:} Bash, C, C++, Python
+		\item {\bf Software:} Atom, Emacs, git, Linux, OSX, ROS, Vim
+	\end{itemize}
+	
+
+\end{document}
